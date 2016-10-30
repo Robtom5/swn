@@ -38,6 +38,7 @@ require './heresy'
 require './npc'
 require './political_party'
 require './religion'
+require './society'
 require './world'
 require './unindent'
 
@@ -45,6 +46,7 @@ require './unindent'
 if __FILE__ == $0
   puts World.new
   puts "Predominant architectural feature: #{Architecture.new}"
+  puts Society.new
   puts "---"
   [2, 3].sample.times { puts "Animal:\n#{Animal.new}\n" }
   puts "---"
