@@ -40,7 +40,7 @@ require 'yaml'
 #
 class Society
   attr_reader :colonization_reason, :initial_government_type, :traits,
-    :conflict, :evolution
+    :conflict, :evolution, :conflict_details, :conflict_constraints, :conflict_changes
 
   def initialize
     yaml = YAML.load(File.read('tables/society.yaml'))
@@ -52,6 +52,10 @@ class Society
     @traits = []
     [2, 3].sample.times { @traits << yaml['trait'].sample.to_str }
     # TODO: Add a government_type attribute based on the evolution (probably need a regex)
+    conflict_extras = yaml['conflict_extras'][conflict]
+    @conflict_details = conflict_extras['details'].sample.to_str
+    @conflict_constraints = conflict_extras['constraints'].sample.to_str
+    @conflict_changes = conflict_extras['changes'].sample.to_str
   end
 
   def to_s
@@ -60,6 +64,9 @@ class Society
       |Initial Government Type: #{@initial_government_type}
       |Traits: #{@traits.join(", ")}
       |Conflict: #{@conflict}
+      |- Details: #{@conflict_details}
+      |- Constraints: #{@conflict_constraints}
+      |- Changes: #{@conflict_changes}
       |Evolution: #{@evolution}
       EOS
   end
