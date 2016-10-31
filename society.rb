@@ -64,9 +64,9 @@ class Society
       |Initial Government Type: #{@initial_government_type}
       |Traits: #{@traits.join(", ")}
       |Conflict: #{@conflict}
-      |- Details: #{@conflict_details}
-      |- Constraints: #{@conflict_constraints}
-      |- Changes: #{@conflict_changes}
+      |* Details: #{@conflict_details}
+      |* Constraints: #{@conflict_constraints}
+      |* Changes: #{@conflict_changes}
       |Evolution: #{@evolution}
       EOS
   end
