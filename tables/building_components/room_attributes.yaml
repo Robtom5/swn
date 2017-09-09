@@ -1,0 +1,10 @@
+---
+universal:
+ sizes:
+  small:
+  - '3m'
+  - '4m'
+  medium:
+  - '8m'
+  large:
+  - '15m'
