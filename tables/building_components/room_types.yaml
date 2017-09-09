@@ -1,0 +1,81 @@
+---
+# All rooms require the same nested keys
+# name: The name of the room type
+# size: a list of valid room sizes, frequency can be
+#  adjusted though duplicate size entries
+# description: a text description of the room
+# prop_number: amount of props to roll for
+#  see storefront for uses
+# props: a list of extra details that could be found
+#  in the room
+
+################
+# Blank Entry  #
+################
+# PUBLIC_KEY:
+#  name: #string
+#  size: #list of strings
+#  description: #string
+#  prop_number: #number
+#  props: #list of strings
+################
+# Room Entries #
+################
+Armory:
+ name: 'Armory'
+ size: 
+ - 'Small'
+ - 'Medium'
+ description: > 
+  A place where arms and ammunition are made, maintained, repaired, stored, or issued, in any combination
+ prop_number: 3
+ props: 
+ - 'Ammo racks'
+ - 'Armor boxes'
+ - 'Machining tools'
+ - 'Locked gun cabinets'
+ - 'Ordnance storages'
+ - 'Powder factory'
+
+Barracks:
+ name: 'Barracks'
+ size:
+ - 'Medium'
+ description: >
+  A room for soldiers to sleep in. Many bunks
+  in neat rows with footlockers for personal effects
+ prop_number: 2
+ props:
+ - 'Footlockers'
+ - 'Stacked bunks'
+
+Storefront:
+ name: 'Storefront'
+ size:
+ - 'Medium'
+ - 'Large'
+ description: >
+  A conventional storefront with a set of generic
+  adverts and items on display
+ prop_number: 1
+ props: # each prop is a possible type of storefront
+ - 'Camping store'
+ - 'Electronics store'
+ - 'Grocery store'
+ - 'Gun store'
+ - 'Armour store'
+
+Unfinished:
+ name: 'Unfinished Room'
+ size:
+ - 'Small'
+ - 'Medium'
+ - 'Large'
+ description: >
+  Either in the process of being built, or construction has been paused/abandoned for some reason.
+ prop_number: 2
+ props:
+ - 'Tools'
+ - 'Exposed wiring'
+ - 'Stacked panelling'
+ - 'Building materials'

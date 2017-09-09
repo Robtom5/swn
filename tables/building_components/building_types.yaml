@@ -1,0 +1,19 @@
+---
+building_type:
+- 'Government'
+- 'Mall'
+- 'Medical'
+- 'Military'
+- 'Office'
+
+Government_rooms:
+- 'Unfinished'
+Mall_rooms:
+- 'Storefront'
+Medical_rooms:
+- 'Unfinished'
+Military_rooms:
+- 'Barracks'
+- 'Unfinished'
+Office_rooms:
+- 'Unfinished'
