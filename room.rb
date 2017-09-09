@@ -27,6 +27,7 @@
 #
 
 require 'yaml'
+require './unindent'
 
 # This class generates a room from tables/room.yaml, 
 # which can be accessed through the room attribute.
@@ -35,11 +36,18 @@ class Room
 
   def initialize
     yaml = YAML.load(File.read('tables/room.yaml'))
-    @room = yaml['room'].sample.to_str
+    @size = yaml['size'].sample.to_str
+    @width = yaml['size_'+@size].sample.to_str
+    @height = yaml['size_'+@size].sample.to_str
+    @room = yaml['room_'+@size].sample.to_str
   end
 
   def to_s
-    @room
+    <<-EOS.unindent
+    |#{@room}
+    |#{@width} x #{@height}
+    EOS
+
   end
 end
 
