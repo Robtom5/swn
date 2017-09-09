@@ -1,19 +1,91 @@
 ---
 building_type:
 - 'Government'
+- 'Industrial'
 - 'Mall'
 - 'Medical'
 - 'Military'
 - 'Office'
 
-Government_rooms:
-- 'Unfinished'
-Mall_rooms:
-- 'Storefront'
-Medical_rooms:
-- 'Unfinished'
-Military_rooms:
-- 'Barracks'
-- 'Unfinished'
-Office_rooms:
-- 'Unfinished'
+################
+# Blank Entry  #
+################
+# PRIMARY_KEY:
+#  common_rooms: #list of strings
+#  uncommon_rooms: #list of strings
+#  rare_rooms: #list of strings
+#  num_common: #list of int
+#  num_uncommon: #list of int
+#  num_rare: #list of int
+
+
+Government:
+ common_rooms:
+ - 'Unfinished'
+ uncommon_rooms:
+ - 'Public_Bathroom'
+ - 'Reception'
+ rare_rooms:
+ - 'Security_Commercial'
+ num_common: [2,3] #list of int
+ num_uncommon: [1,2] #list of int
+ num_rare: [1] #int
+
+Industrial:
+ common_rooms: #list of strings
+ - 'Unfinished'
+ uncommon_rooms: #list of strings
+ - 'Unfinished'
+ rare_rooms: #list of strings
+ - 'Unfinished'
+ num_common: [1,2] #list of int
+ num_uncommon: [0] #list of int
+ num_rare: [0] # int
+
+Mall:
+ common_rooms: #list of strings
+ - 'Storefront'
+ uncommon_rooms: #list of strings
+ - 'Public_Bathroom'
+ rare_rooms: #list of strings
+ - 'Security_Commercial'
+ - 'Clinic'
+ num_common: [1,2] #list of int
+ num_uncommon: [0,1] #list of int
+ num_rare: [0,1] #int
+
+Medical:
+ common_rooms: #list of strings
+ - 'Unfinished'
+ - 'Clinic'
+ uncommon_rooms: #list of strings
+ - 'Public_Bathroom'
+ rare_rooms: #list of strings
+ - 'Reception'
+ num_common: [2,3] #list of int
+ num_uncommon: [1] #list of int
+ num_rare: [1] #int
+
+Military:
+ common_rooms: #list of strings
+ - 'Unfinished'
+ uncommon_rooms: #list of strings
+ - 'Barracks'
+ rare_rooms: #list of strings
+ - 'Armory'
+ - 'Clinic'
+ num_common: [2,3] #list of int
+ num_uncommon: [1] #list of int
+ num_rare: [1] #int
+
+Office:
+ common_rooms: #list of strings
+ - 'Public_Bathroom'
+ - 'Unfinished'
+ uncommon_rooms: #list of strings
+ - 'Security_Commercial'
+ rare_rooms: #list of strings
+ - 'Reception'
+ num_common: [1,2] #list of int
+ num_uncommon: [0,1] #list of int
+ num_rare: [1] #int

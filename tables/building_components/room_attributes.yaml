@@ -8,3 +8,13 @@ universal:
   - '8m'
   large:
   - '15m'
+ shapes:
+ - 'L-Shaped'
+ - 'Rectangle/Square'
+ - 'Circular'
+ - 'Octagon'
+ states:
+ - 'Clean'
+ - 'Mildly Messy'
+ - 'Disorganised'
+ - 'Dirty'

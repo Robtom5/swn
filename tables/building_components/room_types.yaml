@@ -1,4 +1,5 @@
 ---
+# Author: Robtom5
 # All rooms require the same nested keys
 # name: The name of the room type
 # size: a list of valid room sizes, frequency can be
@@ -12,7 +13,7 @@
 ################
 # Blank Entry  #
 ################
-# PUBLIC_KEY:
+# PRIMARY_KEY:
 #  name: #string
 #  size: #list of strings
 #  description: #string
@@ -26,9 +27,10 @@ Armory:
  size: 
  - 'Small'
  - 'Medium'
- description: > 
-  A place where arms and ammunition are made, maintained, repaired, stored, or issued, in any combination
- prop_number: 3
+ description: |
+  A place where arms and ammunition are made, maintained, 
+  repaired, stored, or issued, in any combination
+ prop_number: 2
  props: 
  - 'Ammo racks'
  - 'Armor boxes'
@@ -36,34 +38,114 @@ Armory:
  - 'Locked gun cabinets'
  - 'Ordnance storages'
  - 'Powder factory'
+ - 'Armory technician'
 
 Barracks:
  name: 'Barracks'
  size:
  - 'Medium'
- description: >
+ description: |
   A room for soldiers to sleep in. Many bunks
   in neat rows with footlockers for personal effects
- prop_number: 2
+ prop_number: 1
  props:
+ - 'Asleep soldier'
  - 'Footlockers'
  - 'Stacked bunks'
+
+Clinic:
+ name: 'Medical Clinic'
+ size: 
+ - 'Medium'
+ description: |
+  A small medical clinic for dealing with non-
+  emergency injuries, checkups, and prescribing
+  duties. 
+ prop_number: 2
+ props:
+ - 'Adverts for drugs'
+ - 'Antiseptic smell'
+ - 'Dental equipment'
+ - 'Empty spray hypos'
+ - 'Flickering light'
+ - 'Friendly nurse'
+ - 'Lingering smell of blood'
+ - 'Overworked doctor'
+ - 'Vetinary equipment'
+
+Public_Bathroom:
+ name: 'Public Bathroom/Washroom'
+ size: 
+ - 'Medium'
+ description: |
+  A common feature to many buildings, whether a local 
+  truckstop or the headquarters of a multi-planetary 
+  corporation everywhere needs access to toilets.
+ prop_number: 2
+ props: 
+ - 'Clogged toilet'
+ - 'Cubicles'
+ - 'Plumber fixing sink'
+ - 'Row of sinks'
+ - 'Showers'
+ - 'Stall attendant'
+ - 'Urinals'
+
+Reception:
+ name: 'Reception Hall'
+ size: 
+ - 'Medium'
+ description: |
+  Antechambers like this are commonplace in most 
+  civilised societies, provides clients a place 
+  to wait in the bare minimum of acceptable 
+  comfort.
+ prop_number: 2
+ props: 
+ - 'Bored receptionist'
+ - 'Coffee machine'
+ - 'Nervous looking applicant'
+ - 'Pile of magazines'
+ - 'Tatty sofa'
+ - 'Tv playing soap operas'
+ - 'Watercooler'
+ 
+Security_Commercial:
+ name: 'Security room'
+ size: 
+ - 'Small'
+ - 'Medium'
+ description: |
+  Small rooms like this are common in pretty much any
+  public building, be it malls, offices or even 
+  certain bureaucratic buildings of low importance.
+ prop_number: 2
+ props:
+ - 'Camera monitors'
+ - 'Empty coffee cup'
+ - 'Flickering servers'
+ - 'Half-filled ashtray'
+ - 'Overflowing bin'
+ - 'Small weapons cabinet'
+ - 'Tired security guard'
 
 Storefront:
  name: 'Storefront'
  size:
  - 'Medium'
  - 'Large'
- description: >
+ description: |
   A conventional storefront with a set of generic
   adverts and items on display
  prop_number: 1
  props: # each prop is a possible type of storefront
+ - 'Armour store'
+ - 'Bank'
  - 'Camping store'
+ - "Doctor's Surgery"
  - 'Electronics store'
  - 'Grocery store'
  - 'Gun store'
- - 'Armour store'
 
 Unfinished:
  name: 'Unfinished Room'
@@ -71,11 +153,34 @@ Unfinished:
  - 'Small'
  - 'Medium'
  - 'Large'
- description: >
-  Either in the process of being built, or construction has been paused/abandoned for some reason.
+ description: |
+  Either in the process of being built, or construction 
+  has been paused/abandoned for some reason.
  prop_number: 2
  props:
- - 'Tools'
- - 'Exposed wiring'
- - 'Stacked panelling'
  - 'Building materials'
+ - 'Paint cans'
+ - 'Exposed wiring'
+ - 'Open toolbox'
+ - 'Rusty piping'
+ - 'Stacked panelling'
+ - 'Welders tools'
+
+Utility:
+ name: 'Utility Room'
+ size:
+ - 'Small'
+ - 'Medium'
+ description: |
+  All the basic ammenities needed to 
+  run any large establishment need a 
+  place to stay. This is that place.
+ prop_number: 1
+ props:
+ - 'Air filters'
+ - 'Backup Power'
+ - 'Boilers'
+ - 'Cleaning supplies'
+ - 'Water Tanks'
+
+...
