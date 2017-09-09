@@ -44,10 +44,10 @@ class Room
 
   def to_s
     <<-EOS.unindent
-    |#{@room}
-    |#{@width} x #{@height}
+    |#{@size}-sized Room
+    |Dimensions: #{@width} x #{@height}
+    |Function: #{@room}
     EOS
-
   end
 end
 
